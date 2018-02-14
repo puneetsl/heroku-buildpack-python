@@ -18,7 +18,7 @@ set -eo pipefail
 # Standard Library.
 export BPLOG_PREFIX="buildpack.python"
 export BUILDPACK_LOG_FILE=${BUILDPACK_LOG_FILE:-/dev/null}
-
+export PYMSSQL_BUILD_WITH_BUNDLED_FREETDS=1
 [ "$BUILDPACK_XTRACE" ] && set -o xtrace
 
 # Prepend proper path for virtualenv hackery. This will be deprecated soon.
